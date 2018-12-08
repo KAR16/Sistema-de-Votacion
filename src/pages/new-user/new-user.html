@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Bienvenido al registro de Votación:</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Nombre de Usuario</ion-label>
+        <ion-input type="text" name="nombreUsuario" [(ngModel)]="newUser.name"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>CUI</ion-label>
+        <ion-input type="number"  max="4" name="codigoUsuario" [(ngModel)]="codigoUsuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>No. Empresas</ion-label>
+        <ion-input type="number" name="empresas" [(ngModel)]="companies"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button secondary block (click)="crearUsuario()">Crear Usuario</button>
+    </div>
+</div>
+</ion-content>

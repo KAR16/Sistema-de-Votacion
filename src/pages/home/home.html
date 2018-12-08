@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <!--<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>Votación</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <div>
+      <ion-list>
+
+        <ion-item>
+          <ion-label>Bienvenido al sistema de Votación:</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>CUI</ion-label>
+          <ion-input class="cuiUser" type="number" name="cui" [(ngModel)]="cui"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Palabra Clave</ion-label>
+          <ion-input class="claveUser" type="text" name="clave" [(ngModel)]="clave"></ion-input>
+        </ion-item>
+        
+      </ion-list>
+        
+      <div padding>
+        <button ion-button secondary block (click)="emitirVoto()">Acceder</button>
+      </div>
+
+      <div padding>
+        <button ion-button secondary block (click)="crearUsuario()">Crear Usuario</button>
+      </div>
+  </div>
+  
+</ion-content>

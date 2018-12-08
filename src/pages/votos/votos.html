@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sistema de Votación</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div>
+      <h3>Bienvenido al sistema de Votación:</h3><br>
+      <h3> {{ userObject.name }} </h3>
+      <h4>No. de Empresas: {{ userObject.companies.length }}</h4>
+
+      <!--No. de Votos-->
+      <div class="grupoVotos">
+        <ion-list radio-group *ngFor="let company of companiesObject; let i=index" [(ngModel)]="userObject.companies[i].voto">
+            <ion-list-header>
+              Voto {{ i + 1 }}
+            </ion-list-header>
+          <ion-item>
+            <ion-label>A favor</ion-label>
+            <ion-radio value="A favor"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>En contra</ion-label>
+            <ion-radio value="En contra"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Nulo</ion-label>
+            <ion-radio value="Nulo"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <!-- Boton para Emitir -->
+      <div padding>
+        <button ion-button secondary block (click)="emitirVoto()">Emitir Voto</button>
+      </div>
+    </div>
+      
+
+</ion-content>
